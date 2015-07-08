@@ -37,12 +37,12 @@ Nodebots es un evento que reúne entusiastas de la robótica con programadores J
 - [Roberto Jaimes](http://cshluesocc.org)
 - [Eduardo Valencia](http://cshluesocc.org)
 - [Andres Godinez](http://cshluesocc.org)
-- [Maynor Lopez](cshluesocc.org)
-- 
+- [Maynor Lopez](http://cshluesocc.org)
+-
 
 
 ###Organizan:
-- [Comunidad de Software y Hardware Libre UES FMOcc](cshluesocc.org)
+- [Comunidad de Software y Hardware Libre UES FMOcc](http://cshluesocc.org)
 - [Mozilla El Salvador](http://on.fb.me/1Nv2fSM)
 -
 
@@ -54,3 +54,5 @@ Nodebots es un evento que reúne entusiastas de la robótica con programadores J
 Mas información sobre Nodebots en: http://nodebots.io/
 
 Si te interesa participar, por favor llena el registro:
+
+http://bit.ly/1dLdkmC
