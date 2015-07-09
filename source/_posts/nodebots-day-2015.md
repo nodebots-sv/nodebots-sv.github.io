@@ -1,6 +1,8 @@
 title: Nodebots Day - 25 de Julio 2015
 date: 2015-07-07 17:19:27
 tags: eventos
+category:
+- eventos
 ---
 
 ##San Salvador, El Salvador
@@ -11,6 +13,8 @@ Si tu respuesta es Si para alguna de las preguntas anteriores, únete a nosotros
 Nodebots El Salvador se suma a la celebración mundial del Día Internacional de Nodebots junto a otras ciudades que también van a estar organizando eventos alrededor del mundo.
 
 Esta es la primera vez en el Salvador que se desarrolla un evento de este tipo, un día para aprender, divertirse y pasarla bien escribiendo código y armando circuitos :)
+
+<!-- more -->
 
 ###¿Qué es Nodebots?
 

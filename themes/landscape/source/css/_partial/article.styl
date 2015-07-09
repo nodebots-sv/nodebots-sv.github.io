@@ -44,10 +44,10 @@
   font-weight: bold
   color: color-default
   line-height: line-height-title
-  transition: color 0.2s  
+  transition: color 0.2s
   a&:hover
     color: color-link
- 
+
 .article-entry
   @extend $base-style
   clearfix()
@@ -134,14 +134,17 @@
 .article-more-link a
   display: inline-block
   line-height: 1em
-  padding: 6px 15px
+  padding: 7px 15px
   border-radius: 15px
-  background: color-background
-  color: color-grey
+  border:1px solid color-grey
+  //background: color-background
+  background: color-yellow
+  color: #333
   text-shadow: 0 1px #fff
   text-decoration: none
   &:hover
     background: color-link
+    border: 1px solid #01579b
     color: #fff
     text-decoration: none
     text-shadow: 0 1px darken(color-link, 20%)

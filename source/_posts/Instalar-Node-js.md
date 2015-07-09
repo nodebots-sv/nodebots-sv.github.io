@@ -11,7 +11,7 @@ author_url: https://twitter.com/_carloscarcamo_
 
 En esta guía aprenderemos a instalar node.js en una computadora con GNU/Linux.
 
-Para comenzar necesitas una computada con un sistema operativo basado en GNU/Linux como Debian, Fedora o Arch Linux, etc. Luego necesitas abrir una terminal para ejecutar algunos comandos en consola y seguir la guía a continuación: 
+Para comenzar necesitas una computada con un sistema operativo basado en GNU/Linux como Debian, Fedora o Arch Linux, etc. Luego necesitas abrir una terminal para ejecutar algunos comandos en consola y seguir la guía a continuación:
 
 ##Instalación de Node.js
 
@@ -28,6 +28,8 @@ Luego installar via apt-get
 ```
 $ sudo apt-get install nodejs
 ```
+
+<!-- more -->
 
 **Opcional y recomendado:**
 Para instalar complementos nativos con npm vamos a necesitar instalar las herramientas para compilar:
@@ -141,5 +143,3 @@ $ echo "console.log('Hola Mundo')" > hello.js
 $ node hello.js
 Hola Mundo
 ```
-
-
