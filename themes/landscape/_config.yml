@@ -20,9 +20,9 @@ widgets:
 - recent_posts
 
 # Miscellaneous
-google_analytics:
+google_analytics: UA-64905810-1
 favicon: /favicon.png
-twitter:
-google_plus:
+twitter: NodebotsSV
+google_plus: 109141445080131736818
 fb_admins:
 fb_app_id:
