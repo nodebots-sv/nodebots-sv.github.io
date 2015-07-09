@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Nodebots-Sv</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Nodebots El Salvador website">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nodebots-Sv">
+<meta property="og:url" content="/index.html">
+<meta property="og:site_name" content="Nodebots-Sv">
+<meta property="og:description" content="Nodebots El Salvador website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nodebots-Sv">
+<meta name="twitter:description" content="Nodebots El Salvador website">
+<meta name="twitter:creator" content="@NodebotsSV">
+<link rel="publisher" href="109141445080131730000">
+  
+    <link rel="alternative" href="/atom.xml" title="Nodebots-Sv" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-64905810-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Inicio</a>
+        
+          <a class="main-nav-link" href="/archives">Archivo</a>
+        
+          <a class="main-nav-link" href="/nosotros">Nosotros</a>
+        
+          <a class="main-nav-link" href="https://github.com/nodebots-sv/">Github</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value=""></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Instalar-Node-js" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/08/Instalar-Node-js/" class="article-date">
+  <time datetime="2015-07-09T00:20:48.000Z" itemprop="datePublished">2015-07-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/tutoriales/">tutoriales</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/08/Instalar-Node-js/">Instalar Node.js en GNU/Linux</a>
+    </h1>
+    
+      <a href="https://twitter.com/_carloscarcamo_" rel="external" target="_blank" class="article-author-link">
+        por Carlos Carcamo
+      </a>
+    
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>En esta guía aprenderemos a instalar node.js en una computadora con GNU/Linux.</p>
+<p>Para comenzar necesitas una computada con un sistema operativo basado en GNU/Linux como Debian, Fedora o Arch Linux, etc. Luego necesitas abrir una terminal para ejecutar algunos comandos en consola y seguir la guía a continuación: </p>
+<h2 id="Instalación_de_Node-js">Instalación de Node.js</h2><h2 id="-_Desde_repositorios">- Desde repositorios</h2><h3 id="Debian_y_derivados">Debian y derivados</h3><p>Script de configuración<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -sL http<span class="variable">s:</span>//<span class="keyword">deb</span>.nodesource.<span class="keyword">com</span>/setup_0.<span class="number">12</span> | sudo bash -</span><br></pre></td></tr></table></figure></p>
+<p>Luego installar via apt-get</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="keyword">get</span> install nodejs</span><br></pre></td></tr></table></figure>
+<p><strong>Opcional y recomendado:</strong><br>Para instalar complementos nativos con npm vamos a necesitar instalar las herramientas para compilar:</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="keyword">get</span> install build-essential</span><br></pre></td></tr></table></figure>
+<h3 id="Enterprise_Linux_(RH,_CentOS)_y_Fedora">Enterprise Linux (RH, CentOS) y Fedora</h3><p>Script de configuración<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span> curl -sL <span class="symbol">https:</span>/<span class="regexp">/rpm.nodesource.com/setup</span> | bash -</span><br></pre></td></tr></table></figure></p>
+<p>Luego instalar con yum<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum <span class="keyword">install</span> nodejs</span><br></pre></td></tr></table></figure></p>
+<p><strong>Opcional y recomendado:</strong><br>Para instalar complementos nativos con npm vamos a necesitar instalar las herramientas para compilar:</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>sudo yum install gcc-c++ make</span><br><span class="line">o bien</span><br><span class="line"><span class="variable">$ </span>sudo yum groupinstall <span class="string">'Development Tools'</span></span><br></pre></td></tr></table></figure>
+<p><strong>Alternativas</strong></p>
+<p>A partir de fedora 18:</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum <span class="keyword">install</span> nodejs npm</span><br></pre></td></tr></table></figure>
+<p>Enterprise Linux (RHEL and CentOS):</p>
+<p><a href="http://www.rackspace.com/knowledge_center/article/install-epel-and-additional-repositories-on-centos-and-red-hat" target="_blank" rel="external">Habilitar repositorios EPEL</a><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum <span class="operator"><span class="keyword">install</span> epel-<span class="keyword">release</span></span></span><br></pre></td></tr></table></figure></p>
+<p>Luego instalar node:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum <span class="operator"><span class="keyword">install</span> nodejs npm <span class="comment">--enablerepo=epel</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Arch_Linux_y_derivados">Arch Linux y derivados</h3><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacman -S nodejs <span class="built_in">npm</span></span><br></pre></td></tr></table></figure>
+<h2 id="-_Instalación_manual_(Compilar_nodejs)">- Instalación manual (Compilar nodejs)</h2><p>Si prefieres puedes compilar nodejs desde su código fuente, acá las instrucciones:</p>
+<p><strong>Prerrequisitos:</strong></p>
+<ul>
+<li>GCC &gt;= 4.2</li>
+<li>G++ &gt;= 4.2</li>
+<li>Python 2.6 ó 2.7</li>
+<li>GNU Make &gt;= 3.81</li>
+<li>libexecinfo (FreeBSD and OpenBSD only)</li>
+</ul>
+<p>Asumiendo que tienes instalado python (Que normalmente viene por defecto en las distros GNU/Linux), para instalar las utilidades podemos hacerlo de la siguiente manera:</p>
+<p><strong>Debian y derivados</strong></p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="keyword">get</span> install build-essential</span><br></pre></td></tr></table></figure>
+<p><strong>Enterprise Linux (RHEL and CentOS) y Fedora:</strong></p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>sudo yum groupinstall <span class="string">'Development Tools'</span></span><br></pre></td></tr></table></figure>
+<p><strong>Compilar:</strong></p>
+<p>Descargar codigo fuente<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>wget <span class="symbol">http:</span>/<span class="regexp">/nodejs.org/dist</span><span class="regexp">/v0.12.4/node</span>-v<span class="number">0</span>.<span class="number">12.4</span>.tar.gz</span><br></pre></td></tr></table></figure></p>
+<p>Descomprimir<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxf node-v0.<span class="number">12.4</span><span class="class">.tar</span><span class="class">.gz</span> &amp;&amp; cd node-v0.<span class="number">12.4</span></span><br></pre></td></tr></table></figure></p>
+<p>Compilar<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>./configure</span><br><span class="line"><span class="variable">$ </span>make</span><br><span class="line"><span class="variable">$ </span>sudo make install</span><br></pre></td></tr></table></figure></p>
+<h2 id="-_Verificar_instalación">- Verificar instalación</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">v0.<span class="number">12.4</span></span><br><span class="line">$ npm -v</span><br><span class="line"><span class="number">2</span><span class="class">.x</span><span class="class">.x</span></span><br></pre></td></tr></table></figure>
+<p>Hola mundo con node.js<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ echo <span class="string">"console.log('Hola Mundo')"</span> &gt; hello<span class="class">.js</span></span><br><span class="line">$ node hello<span class="class">.js</span></span><br><span class="line">Hola Mundo</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="/2015/07/08/Instalar-Node-js/" data-id="cibvgnv2h00008cfaxe7nszca" class="article-share-link">Share</a>
+      
+        <a href="/2015/07/08/Instalar-Node-js/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GNU-Linux/">GNU/Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-nodebots-day-2015" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/07/nodebots-day-2015/" class="article-date">
+  <time datetime="2015-07-07T23:19:27.000Z" itemprop="datePublished">2015-07-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/07/nodebots-day-2015/">Nodebots Day - 25 de Julio 2015</a>
+    </h1>
+    
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="San_Salvador,_El_Salvador">San Salvador, El Salvador</h2><h3 id="¿Te_gusta_programar_con_JavaScript?_¿Te_gusta_la_electrónica?_¿Te_gustaría_aprender_a_usar_Arduino_con_JavaScript?">¿Te gusta programar con JavaScript? ¿Te gusta la electrónica? ¿Te gustaría aprender a usar Arduino con JavaScript?</h3><p>Si tu respuesta es Si para alguna de las preguntas anteriores, únete a nosotros!</p>
+<p>Nodebots El Salvador se suma a la celebración mundial del Día Internacional de Nodebots junto a otras ciudades que también van a estar organizando eventos alrededor del mundo.</p>
+<p>Esta es la primera vez en el Salvador que se desarrolla un evento de este tipo, un día para aprender, divertirse y pasarla bien escribiendo código y armando circuitos :)</p>
+<h3 id="¿Qué_es_Nodebots?">¿Qué es Nodebots?</h3><p>Nodebots es un evento que reúne entusiastas de la robótica con programadores Javascript con el fin de hacer robots y divertirse. En el evento participa un grupo de mentores que ayudan a resolver las dudas y/o consultas que puedas tener.</p>
+<h3 id="¿Qué_Necesitas_para_participar?">¿Qué Necesitas para participar?</h3><p><strong>Para el día del evento, necesitas lo siguiente:</strong></p>
+<ul>
+<li>Una Laptop</li>
+<li>Sistema Operativo GNU/Linux instalado o virtualizado</li>
+<li>(Opcional) Conocimientos de JavaScript</li>
+<li>(Opcional) Conocimientos básicos de Electrónica digital</li>
+<li>Muchas ganas de aprender</li>
+</ul>
+<h3 id="¿Cuando_y_donde?">¿Cuando y donde?</h3><p><strong>Lugar:</strong> por definirse…<br><strong>Día:</strong> 25 de Julio de 2015<br><strong>Hora:</strong> De 9:00 am - 02:00 pm</p>
+<ul>
+<li><a href="https://twitter.com/_carloscarcamo_" target="_blank" rel="external">Carlos Cárcamo</a></li>
+<li><a href="http://cshluesocc.org" target="_blank" rel="external">Roberto Jaimes</a></li>
+<li><a href="http://cshluesocc.org" target="_blank" rel="external">Eduardo Valencia</a></li>
+<li><a href="http://cshluesocc.org" target="_blank" rel="external">Andres Godinez</a></li>
+<li><a href="http://cshluesocc.org" target="_blank" rel="external">Maynor Lopez</a><br>-</li>
+</ul>
+<h3 id="Organizan:">Organizan:</h3><ul>
+<li><a href="http://cshluesocc.org" target="_blank" rel="external">Comunidad de Software y Hardware Libre UES FMOcc</a></li>
+<li><a href="http://on.fb.me/1Nv2fSM" target="_blank" rel="external">Mozilla El Salvador</a><br>-</li>
+</ul>
+<h3 id="Sponsors:">Sponsors:</h3><ul>
+<li><a href="http://webslinder.com" target="_blank" rel="external">webslinder.com</a><br>-</li>
+</ul>
+<p>Mas información sobre Nodebots en: <a href="http://nodebots.io/" target="_blank" rel="external">http://nodebots.io/</a></p>
+<p>Si te interesa participar, por favor llena el registro:</p>
+<p><a href="http://bit.ly/1dLdkmC" target="_blank" rel="external">http://bit.ly/1dLdkmC</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="/2015/07/07/nodebots-day-2015/" data-id="cibvgnv4b00088cfak9g9snqr" class="article-share-link">Share</a>
+      
+        <a href="/2015/07/07/nodebots-day-2015/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/eventos/">eventos</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categoria</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/tutoriales/">tutoriales</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/GNU-Linux/">GNU/Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/eventos/">eventos</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/GNU-Linux/" style="font-size: 10px;">GNU/Linux</a> <a href="/tags/eventos/" style="font-size: 10px;">eventos</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archivo</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">Julio 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Últimos</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/07/08/Instalar-Node-js/">Instalar Node.js en GNU/Linux</a>
+          </li>
+        
+          <li>
+            <a href="/2015/07/07/nodebots-day-2015/">Nodebots Day - 25 de Julio 2015</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Carlos Carcamo<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Inicio</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archivo</a>
+  
+    <a href="/nosotros" class="mobile-nav-link">Nosotros</a>
+  
+    <a href="https://github.com/nodebots-sv/" class="mobile-nav-link">Github</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'nodebots-sv';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
