@@ -693,16 +693,18 @@ a.article-author-link:hover {
 .article-more-link a {
   display: inline-block;
   line-height: 1em;
-  padding: 6px 15px;
+  padding: 7px 15px;
   -webkit-border-radius: 15px;
   border-radius: 15px;
-  background: #fff;
-  color: #999;
+  border: 1px solid #999;
+  background: #fdd835;
+  color: #333;
   text-shadow: 0 1px #fff;
   text-decoration: none;
 }
 .article-more-link a:hover {
   background: #258fb8;
+  border: 1px solid #01579b;
   color: #fff;
   text-decoration: none;
   text-shadow: 0 1px #1e7293;
