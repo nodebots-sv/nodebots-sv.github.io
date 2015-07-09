@@ -23,7 +23,7 @@ Script de configuración
 ```
 $ curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
 ```
-Luego installar via apt-get
+Luego instalar via apt-get
 
 ```
 $ sudo apt-get install nodejs
