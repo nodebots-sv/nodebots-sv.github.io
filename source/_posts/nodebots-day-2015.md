@@ -25,7 +25,9 @@ NodeBots es un evento que reúne entusiastas de la robótica con programadores J
 **Para el día del evento, necesitas lo siguiente:**
 
 - Una Laptop
-- Sistema Operativo GNU/Linux instalado o virtualizado
+- Arduino u otra placa compatible (si quieres hacer las pruebas tu mismo), mira al siguiente link: http://johnny-five.io/platform-support/
+- Leds, cables, etc.
+- Sistema Operativo GNU/Linux instalado o virtualizado, windows (Bajo tu propio riesgo)
 - (Opcional) Conocimientos de JavaScript
 - (Opcional) Conocimientos básicos de Electrónica digital
 - Muchas ganas de aprender
