@@ -52,7 +52,12 @@ NodeBots es un evento que reúne entusiastas de la robótica con programadores J
 ![CSHL, MozillaSV, NodeBots-Sv](http://i.imgur.com/BsV67GX.png)
 
 ###Sponsors:
-![Webslinder.com, Hub170.com](http://i.imgur.com/o2shNX6.png)
+
+* [Webslinder](http://webslinder.com)
+* [Hub170](http://hub170.com)
+* [Ideas Wow](http://ideaswow.com)
+
+![Webslinder.com, Hub170.com, ideaswow.com](http://i.imgur.com/D7wSDPe.png?1)
 
 Más información sobre NodeBots en: http://nodebots.io/
 
