@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Introducción a NodeBots | Nodebots-Sv</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="En esta guía aprenderemos a usar Node.js para comunicarnos con Arduino usando johnny-five un Framework JavaScript para robótica. A continuación una lista de requerimientos para poder seguir este tutor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Introducción a NodeBots">
+<meta property="og:url" content="http://nodebots-sv.github.io/2015/07/23/Introduccion-a-NodeBots/index.html">
+<meta property="og:site_name" content="Nodebots-Sv">
+<meta property="og:description" content="En esta guía aprenderemos a usar Node.js para comunicarnos con Arduino usando johnny-five un Framework JavaScript para robótica. A continuación una lista de requerimientos para poder seguir este tutor">
+<meta property="og:image" content="http://i.imgur.com/adsOpsI.jpg?1">
+<meta property="og:image" content="http://i.imgur.com/mIR0MhW.png?1">
+<meta property="og:image" content="http://i.imgur.com/Ee5wwt4.png?1">
+<meta property="og:image" content="http://i.imgur.com/VyJh3Ih.gif">
+<meta property="og:image" content="http://i.imgur.com/0erQFLu.gif">
+<meta property="og:updated_time" content="2015-07-24T00:15:26.017Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Introducción a NodeBots">
+<meta name="twitter:description" content="En esta guía aprenderemos a usar Node.js para comunicarnos con Arduino usando johnny-five un Framework JavaScript para robótica. A continuación una lista de requerimientos para poder seguir este tutor">
+<meta name="twitter:creator" content="@NodebotsSV">
+<link rel="publisher" href="109141445080131730000">
+  
+    <link rel="alternative" href="/atom.xml" title="Nodebots-Sv" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-64905810-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Inicio</a>
+        
+          <a class="main-nav-link" href="/archives">Archivo</a>
+        
+          <a class="main-nav-link" href="/nosotros">Nosotros</a>
+        
+          <a class="main-nav-link" href="https://github.com/nodebots-sv/">Github</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://nodebots-sv.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Introduccion-a-NodeBots" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/23/Introduccion-a-NodeBots/" class="article-date">
+  <time datetime="2015-07-23T19:00:00.000Z" itemprop="datePublished">2015-07-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/tutoriales/">tutoriales</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Introducción a NodeBots
+    </h1>
+      
+        <a href="https://twitter.com/_carloscarcamo_" rel="external" target="_blank" class="article-author-link">
+          por Carlos Carcamo
+        </a>
+            
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>En esta guía aprenderemos a usar Node.js para comunicarnos con Arduino usando <a href="http://johnny-five.io/" target="_blank" rel="external">johnny-five</a> un Framework JavaScript para robótica. A continuación una lista de requerimientos para poder seguir este tutorial:</p>
+<ul>
+<li>Node.js y NPM instalados y corriendo en nuestro ordenador, <a href="http://nodebots-sv.github.io/2015/07/08/Instalar-Node-js/">(Ver como instalar Node)</a><br></li>
+<li><a href="https://www.arduino.cc/en/main/software" target="_blank" rel="external">Arduino IDE</a></li>
+<li>Placa <a href="https://www.arduino.cc/en/Main/ArduinoBoardUno" target="_blank" rel="external">Arduino UNO</a> (o compatibles)<br></li>
+<li>1 o más Leds<br></li>
+</ul>
+<h2 id="Preparando_el_Arduino">Preparando el Arduino</h2><p>Node.js no puede comunicarse con arduino por si solo pues arduino por defecto se programa en lenguaje C, pero existe otra manera de controlar Arduino desde un software host en el ordenador sin necesidad de programar en el lenguaje nativo de la placa. Esto es posible a través de la librería <a href="https://www.arduino.cc/en/reference/firmata" target="_blank" rel="external">Firmata</a>. Firmata es un firmware que establece un protocolo de comunicación entre un programa en el ordenador y el Arduino.</p>
+<a id="more"></a>
+<p>Dicho lo anterior, necesitamos instalar el firmware Firmata en el Arduino, esto es muy simple, el Arduino IDE trae una serie de ejemplos listos para ser cargados en la placa Arduino, entre estos ejemplos tenemos el “StandardFirmata” el cual usaremos en este turorial. Para cargar firmata al arduino seguimos los siguientes pasos:</p>
+<ul>
+<li>En el menu seleccionar:<br><strong>File &gt;  Examples &gt; Firmata -&gt; StandardFirmata</strong></li>
+</ul>
+<p><img src="http://i.imgur.com/adsOpsI.jpg?1" alt="Firmata Arduino IDE"></p>
+<ul>
+<li>Cargar firmata a la placa arduino:<br>Hacer click en el botón “Upload”, una vez cargado el firmware puedes cerrar el Arduino IDE.</li>
+</ul>
+<p><img src="http://i.imgur.com/mIR0MhW.png?1" alt="Cargar firmata"></p>
+<p><strong>Solucionando problemas</strong></p>
+<p>En GNU/Linux es posible que el Arduino IDE tenga deshabilitado la opción para seleccionar el puerto serial y por lo tanto no poder manipular la placa Arduino conectada al ordenador. La siguiente imagen ilustra este problema:</p>
+<p><img src="http://i.imgur.com/Ee5wwt4.png?1" alt="No serialport"></p>
+<p>Para solucionar este problema ejecuta lo siguiente en una terminal:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo usermod -<span class="tag">a</span> -G dialout &lt;usuario&gt;</span><br><span class="line">$ sudo usermod -<span class="tag">a</span> -G tty &lt;usuario&gt;</span><br></pre></td></tr></table></figure>
+<p>Cierra e inicia sesión con tu usuario, el problema deberá estar solucionado!</p>
+<h2 id="‘Hola_Mundo!’_con_Arduino_+_Node-js">‘Hola Mundo!’ con Arduino + Node.js</h2><p>Vamos a construir el siguiente ejemplo:</p>
+<p><img src="http://i.imgur.com/VyJh3Ih.gif" alt="Hola mundo, fuente: http://johnny-five.io"></p>
+<p>Para comenzar vamos crear una carpeta e instalar el modulo <a href="https://github.com/rwaldron/johnny-five" target="_blank" rel="external">johnny-five</a> para comunicarnos con Arduino. Sigue los pasos a continuación:</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>mkdir nodebots &amp;&amp; cd <span class="variable">$_</span></span><br><span class="line"><span class="variable">$ </span>npm install johnny-five</span><br></pre></td></tr></table></figure>
+<p>Dentro de la carpeta nodebots, crea un archivo llamado <strong>hello-world.js</strong> y agrega el siguiente código:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> five = <span class="built_in">require</span>(<span class="string">"johnny-five"</span>),</span><br><span class="line">  board = <span class="keyword">new</span> five.Board();</span><br><span class="line">  <span class="comment">// usar este codigo en caso de que johnny-five no reconozca ningun dispositivo</span></span><br><span class="line">  <span class="comment">//board = new five.Board(&#123;port: "/dev/ttyACM0"&#125;);</span></span><br><span class="line">board.on(<span class="string">"ready"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">//crear un led en el pin 13</span></span><br><span class="line">  <span class="keyword">var</span> led = <span class="keyword">new</span> five.Led(<span class="number">13</span>);</span><br><span class="line">  <span class="comment">//parpadear cada segundo</span></span><br><span class="line">  led.blink(<span class="number">1000</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>Conecta tu arduino a una fuente de energía y ejecuta lo siguiente:</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>node hello-world.js</span><br></pre></td></tr></table></figure>
+<p><img src="http://i.imgur.com/0erQFLu.gif" alt="Ese momento en que creas un circuito en menos de 5 minutos!"></p>
+<p>El led comenzará a parpadear además en la terminal veras unos logs y la consola se volverá interactiva a la espera que teclees algun comando. Procedemos a detener el programa escribiendo <strong>.exit</strong>.</p>
+<p>Felicidades!!! acabas de crear tu primer script con Node.js capaz de comunicarse con tu Arduino :)</p>
+<h3 id="Recapitulemos_lo_que_hemos_hecho:">Recapitulemos lo que hemos hecho:</h3><p>Primero, hemos incluido el modulo johnny-five, con la palabra reservada <strong>require</strong>, que nos permite interactuar con arduino:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">var</span> five = <span class="function"><span class="title">require</span><span class="params">(<span class="string">'johnny-five'</span>)</span></span></span><br></pre></td></tr></table></figure>
+<p>Luego instanciamos la clase constructora <strong>five.Board</strong> que es parte del API de johnny-five, ver <a href="http://johnny-five.io/api/board/" target="_blank" rel="external">Board API</a></p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> board = <span class="keyword">new</span> five.Board();</span><br></pre></td></tr></table></figure>
+<p>Luego, agregamos un <a href="https://nodejs.org/api/events.html#events_class_events_eventemitter" target="_blank" rel="external">listener</a> al evento ‘ready’, el listener es una función <a href="http://fernetjs.com/2011/12/creando-y-utilizando-callbacks/" target="_blank" rel="external">callback</a> que se ejecuta cuando el evento ready sea emitido, esto será luego del evento ‘connect’ y cuando la instancia del objecto Board haya completado la inicialización del hardware.</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">board.on(<span class="string">"ready"</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>Dentro del callback, creamos un objeto que representa un led usando la clase constructora <strong>five.Led</strong>, ver <a href="http://johnny-five.io/api/led/" target="_blank" rel="external">Led API</a></p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> led = <span class="keyword">new</span> five.Led(<span class="number">13</span>);</span><br></pre></td></tr></table></figure>
+<p>Por último ejecutamos la función <strong>blink</strong> que hace parpadear nuestro led en el pin 13. A la función le pasamos como parámetro el intervalo de tiempo de parpadeo (milisegundos)</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">led</span><span class="class">.blink</span>(1000);</span><br></pre></td></tr></table></figure>
+<p>Listo! hemos creado nuestro primer script usando Node.js y Arduino, ¿verdad que fue sencillo?</p>
+<p>Compartimos acá el código fuente de este ejemplo que esta en nuestra pagina de github + un par de ejemplos básicos para que puedas probar en tu casa:</p>
+<p><a href="https://github.com/nodebots-sv/ejemplos-basicos" target="_blank" rel="external">https://github.com/nodebots-sv/ejemplos-basicos</a></p>
+<p>Si deseas estudiar más ejemplos, ve a la pagina oficial del proyecto <a href="http://johnny-five.io/" target="_blank" rel="external">johnny-five</a> ahí encontraras mucha más información.</p>
+<p>Si te gusto este sencillo tutorial, comparte este post y deja tus comentarios abajo, cualquier duda escríbenos.</p>
+<p><strong>¿Quieres unirte a la comunidad?</strong></p>
+<p>Encantados, síguenos en twitter <a href="https://twitter.com/NodebotsSV" target="_blank" rel="external">@NodebotsSV</a>, escríbenos a <a href="mailto:nodebots.sv@gmail.com" target="_blank" rel="external">nodebots.sv@gmail.com</a> y con gusto te responderemos.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://nodebots-sv.github.io/2015/07/23/Introduccion-a-NodeBots/" data-id="cicgvlkdo0000x3faexhocopi" class="article-share-link">Compartir</a>
+      
+        <a href="http://nodebots-sv.github.io/2015/07/23/Introduccion-a-NodeBots/#disqus_thread" class="article-comment-link">Comentarios</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Arduino/">Arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hardware/">Hardware</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NodeBots/">NodeBots</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/johnny-five-js/">johnny-five.js</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/07/08/Instalar-Node-js/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Instalar Node.js en GNU/Linux</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categorias</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/eventos/">eventos</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tutoriales/">tutoriales</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arduino/">Arduino</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GNU-Linux/">GNU/Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hardware/">Hardware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NodeBots/">NodeBots</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/eventos/">eventos</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/johnny-five-js/">johnny-five.js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Arduino/" style="font-size: 10px;">Arduino</a> <a href="/tags/GNU-Linux/" style="font-size: 10px;">GNU/Linux</a> <a href="/tags/Hardware/" style="font-size: 10px;">Hardware</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/NodeBots/" style="font-size: 10px;">NodeBots</a> <a href="/tags/eventos/" style="font-size: 10px;">eventos</a> <a href="/tags/johnny-five-js/" style="font-size: 10px;">johnny-five.js</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archivo</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">Julio 2015</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Últimos</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/07/23/Introduccion-a-NodeBots/">Introducción a NodeBots</a>
+          </li>
+        
+          <li>
+            <a href="/2015/07/08/Instalar-Node-js/">Instalar Node.js en GNU/Linux</a>
+          </li>
+        
+          <li>
+            <a href="/2015/07/07/nodebots-day-2015/">International NodeBots Day - 25 de Julio 2015</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Carlos Carcamo<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Inicio</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archivo</a>
+  
+    <a href="/nosotros" class="mobile-nav-link">Nosotros</a>
+  
+    <a href="https://github.com/nodebots-sv/" class="mobile-nav-link">Github</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'nodebots-sv';
+  
+  var disqus_url = 'http://nodebots-sv.github.io/2015/07/23/Introduccion-a-NodeBots/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
