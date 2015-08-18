@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Arduino y Node.js en Archlinux | Nodebots-Sv</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="En este tutorial aprenderemos a trabajar con Arduino y Node.js en Archlinux.
+Para comenzar vamos a seguir los siguientes pasos:
+
+Abrimos una terminal y escribimos.
+ 1$ yaourt -S arduino
+
+Ahora agregam">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arduino y Node.js en Archlinux">
+<meta property="og:url" content="http://nodebots-sv.github.io/2015/08/18/Arduino-y-Node-js-en-Archlinux/index.html">
+<meta property="og:site_name" content="Nodebots-Sv">
+<meta property="og:description" content="En este tutorial aprenderemos a trabajar con Arduino y Node.js en Archlinux.
+Para comenzar vamos a seguir los siguientes pasos:
+
+Abrimos una terminal y escribimos.
+ 1$ yaourt -S arduino
+
+Ahora agregam">
+<meta property="og:image" content="http://i.imgur.com/MC3DRVF.png">
+<meta property="og:image" content="http://i.imgur.com/THXhucN.png?1">
+<meta property="og:image" content="http://i.imgur.com/ia8UATr.png?1">
+<meta property="og:image" content="http://i.imgur.com/VyJh3Ih.gif">
+<meta property="og:updated_time" content="2015-08-18T22:38:22.613Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Arduino y Node.js en Archlinux">
+<meta name="twitter:description" content="En este tutorial aprenderemos a trabajar con Arduino y Node.js en Archlinux.
+Para comenzar vamos a seguir los siguientes pasos:
+
+Abrimos una terminal y escribimos.
+ 1$ yaourt -S arduino
+
+Ahora agregam">
+<meta name="twitter:creator" content="@NodebotsSV">
+<link rel="publisher" href="109141445080131730000">
+  
+    <link rel="alternative" href="/atom.xml" title="Nodebots-Sv" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-64905810-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Inicio</a>
+        
+          <a class="main-nav-link" href="/archives">Archivo</a>
+        
+          <a class="main-nav-link" href="/nosotros">Nosotros</a>
+        
+          <a class="main-nav-link" href="https://github.com/nodebots-sv/">Github</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://nodebots-sv.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Arduino-y-Node-js-en-Archlinux" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/08/18/Arduino-y-Node-js-en-Archlinux/" class="article-date">
+  <time datetime="2015-08-18T21:17:36.000Z" itemprop="datePublished">2015-08-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/tutoriales/">tutoriales</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Arduino y Node.js en Archlinux
+    </h1>
+      
+        <a href="https://twitter.com/xiorone" rel="external" target="_blank" class="article-author-link">
+          por Giovanni Hurtado
+        </a>
+            
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://i.imgur.com/MC3DRVF.png" alt="Arduino + Archlinux"></p>
+<p>En este tutorial aprenderemos a trabajar con Arduino y Node.js en Archlinux.</p>
+<p>Para comenzar vamos a seguir los siguientes pasos:</p>
+<ol>
+<li><p>Abrimos una terminal y escribimos.</p>
+ <figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>yaourt -<span class="constant">S </span>arduino</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Ahora agregamos al usuario a los grupos uucp y lock:</p>
+ <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo gpasswd -<span class="tag">a</span> &lt;user&gt; uucp</span><br><span class="line">$ sudo gpasswd -<span class="tag">a</span> &lt;user&gt; lock</span><br></pre></td></tr></table></figure>
+ <a id="more"></a>
+</li>
+<li><p>Cerramos la sesión del usuario.</p>
+</li>
+<li><p>Conectamos el Arduino según la siguiente imagen.</p>
+<p> <img src="http://i.imgur.com/THXhucN.png?1" alt="Conectar arduino"></p>
+</li>
+<li><p>Ahora ingresamos al IDE del arduino<br> <img src="http://i.imgur.com/ia8UATr.png?1" alt="Arduino IDE"></p>
+</li>
+<li><p>Se realizarán los siguientes pasos:</p>
+<p> a. Connect your Arduino-compatible microcontroller via USB<br> b. Launch Arduino IDE and open the Firmata sketch via the menu: File &gt; Examples &gt; Firmata &gt; StandardFirmata<br> c. Select your Arduino board type (e.g. Arduino Uno) via Tools &gt; Board<br> d. Select the port for your board via Tools &gt; Serial Port &gt; (the comm port of your Arduino)<br> e. Upload the program by selecting File &gt; Upload</p>
+</li>
+<li><p>Ahora instalamos <a href="https://nodejs.org/" target="_blank" rel="external">NodeJS</a></p>
+ <figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>sudo pacman -<span class="constant">S </span>nodejs</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Luego instalamos <a href="https://www.npmjs.com/" target="_blank" rel="external">NPM</a></p>
+ <figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacman -S <span class="built_in">npm</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Para nuestro primer ejemplo vamos a conectar un LED en el arduino como se muestra a continuación: pata corta en GND y pata larga en pin 13.</p>
+<p><img src="http://i.imgur.com/VyJh3Ih.gif" alt="ejemplo"></p>
+</li>
+</ol>
+<h2 id="Primer_ejemplo_de_programación_con_NodeJS">Primer ejemplo de programación con NodeJS</h2><h3 id="Pasos:">Pasos:</h3><ol>
+<li><p>Crear un directorio llamado Led</p>
+ <figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> led</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Ingresamos al directorio</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> led</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Instalamos el modulo johnny-five</p>
+ <figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ npm install johnny-five</span><br><span class="line">-</span><br><span class="line">&gt; serialport<span class="variable">@1</span>.7.4 install /home/NodeBots/led/node_modules/johnny-five/node_modules/serialport</span><br><span class="line">&gt; node-pre-gyp install --fallback-to-build</span><br><span class="line"></span><br><span class="line">[serialport] Success: <span class="string">"/home/NodeBots/led/node_modules/johnny-five/node_modules/serialport/build/serialport/v1.7.4/Release/node-v14-linux-x64/serialport.node"</span> is installed v</span><br><span class="line">ia remote</span><br><span class="line">johnny-five<span class="variable">@0</span>.8.86 node_modules/johnny-five</span><br><span class="line">├── ease-component<span class="variable">@1</span>.0.0</span><br><span class="line">├── descriptor<span class="variable">@0</span>.1.0</span><br><span class="line">├── <span class="keyword">color</span>-convert<span class="variable">@0</span>.5.3</span><br><span class="line">├── es6-shim<span class="variable">@0</span>.33.0</span><br><span class="line">├── nanotimer<span class="variable">@0</span>.3.1</span><br><span class="line">├── lodash<span class="variable">@3</span>.10.1</span><br><span class="line">├── temporal<span class="variable">@0</span>.4.0</span><br><span class="line">├── chalk<span class="variable">@1</span>.1.0 (supports-<span class="keyword">color</span><span class="variable">@2</span>.0.0, ansi-styles<span class="variable">@2</span>.1.0, escape-<span class="keyword">string</span>-regexp<span class="variable">@1</span>.0.3, <span class="keyword">strip</span>-ansi<span class="variable">@3</span>.0.0, has-ansi<span class="variable">@2</span>.0.0)</span><br><span class="line">├── array-includes<span class="variable">@2</span>.0.0 (define-properties<span class="variable">@1</span>.1.1, es-abstract<span class="variable">@1</span>.2.2)</span><br><span class="line">├── firmata<span class="variable">@0</span>.5.5 (object-assign<span class="variable">@1</span>.0.0, browser-serialport<span class="variable">@2</span>.0.3, es6-map<span class="variable">@0</span>.1.1)</span><br><span class="line">└── serialport<span class="variable">@1</span>.7.4 (bindings<span class="variable">@1</span>.2.1, sf<span class="variable">@0</span>.1.7, async<span class="variable">@0</span>.9.0, nan<span class="variable">@1</span>.8.4, debug<span class="variable">@2</span>.2.0, optimist<span class="variable">@0</span>.6.1)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Ahora escribimos el primer programa NodeJS usando johnny-five llamado led.js con su editor preferido.</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ vim led.js</span><br><span class="line"><span class="keyword">var</span> five = <span class="built_in">require</span>(<span class="string">"johnny-five"</span>),</span><br><span class="line"> board = <span class="keyword">new</span> five.Board();</span><br><span class="line"><span class="comment">// usar este código en caso de que johnny-five no reconoce ningun dispositivo</span></span><br><span class="line"><span class="comment">//board = new five.Board(&#123;port: "/dev/ttyACM0"&#125;);</span></span><br><span class="line"></span><br><span class="line">board.on(<span class="string">"ready"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> <span class="comment">//crear un led en el pin 13</span></span><br><span class="line"> <span class="keyword">var</span> led = <span class="keyword">new</span> five.Led(<span class="number">13</span>);</span><br><span class="line"></span><br><span class="line"> <span class="comment">//parpadear cada segundo</span></span><br><span class="line"> led.blink(<span class="number">1000</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Ejecutamos el programa</p>
+ <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ node led<span class="class">.js</span>  </span><br><span class="line"><span class="number">1439911736840</span> <span class="function"><span class="title">Device</span><span class="params">(s)</span></span> /dev/ttyACM0   </span><br><span class="line"><span class="number">1439911736855</span> Connected /dev/ttyACM0   </span><br><span class="line"><span class="number">1439911740299</span> Repl Initialized   </span><br><span class="line">&gt;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Veremos nuestro led parpadeando cada segundo.</p>
+</li>
+<li>Para cancelar el programa hay que digitar .exit o presionar 2 veces control+c.</li>
+</ol>
+<p>Listo, ya podemos comenzar a inventar con Arduino y Node.js en Archlinux.</p>
+<p>¿Te gusto este tutorial? si tu respuesta es si, comparte este post y deja tus comentarios abajo, cualquier duda escríbenos a nuestro correo <a href="mailto:nodebots.sv@gmail.com" target="_blank" rel="external">nodebots.sv@gmail.com</a> y siguenos en twitter <a href="https://twitter.com/NodebotsSV" target="_blank" rel="external">@NodebotsSV</a>.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://nodebots-sv.github.io/2015/08/18/Arduino-y-Node-js-en-Archlinux/" data-id="cidhxk5zg0000ygfaxwe8ts7x" class="article-share-link">Compartir</a>
+      
+        <a href="http://nodebots-sv.github.io/2015/08/18/Arduino-y-Node-js-en-Archlinux/#disqus_thread" class="article-comment-link">Comentarios</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Archlinux/">Archlinux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Arduino/">Arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/07/08/Instalar-Node-js/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Instalar Node.js en GNU/Linux</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categorias</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/eventos/">eventos</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tutoriales/">tutoriales</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Archlinux/">Archlinux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arduino/">Arduino</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GNU-Linux/">GNU/Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/eventos/">eventos</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Archlinux/" style="font-size: 10px;">Archlinux</a> <a href="/tags/Arduino/" style="font-size: 10px;">Arduino</a> <a href="/tags/GNU-Linux/" style="font-size: 10px;">GNU/Linux</a> <a href="/tags/eventos/" style="font-size: 10px;">eventos</a> <a href="/tags/node-js/" style="font-size: 20px;">node.js</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archivo</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">Agosto 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">Julio 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Últimos</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/08/18/Arduino-y-Node-js-en-Archlinux/">Arduino y Node.js en Archlinux</a>
+          </li>
+        
+          <li>
+            <a href="/2015/07/08/Instalar-Node-js/">Instalar Node.js en GNU/Linux</a>
+          </li>
+        
+          <li>
+            <a href="/2015/07/07/nodebots-day-2015/">International NodeBots Day - 25 de Julio 2015</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Carlos Carcamo<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Inicio</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archivo</a>
+  
+    <a href="/nosotros" class="mobile-nav-link">Nosotros</a>
+  
+    <a href="https://github.com/nodebots-sv/" class="mobile-nav-link">Github</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'nodebots-sv';
+  
+  var disqus_url = 'http://nodebots-sv.github.io/2015/08/18/Arduino-y-Node-js-en-Archlinux/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

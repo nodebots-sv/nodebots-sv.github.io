@@ -75,10 +75,10 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
-    <article id="post-Introduccion-a-NodeBots" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Arduino-y-Node-js-en-Archlinux" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/07/23/Introduccion-a-NodeBots/" class="article-date">
-  <time datetime="2015-07-23T19:00:00.000Z" itemprop="datePublished">2015-07-23</time>
+    <a href="/2015/08/18/Arduino-y-Node-js-en-Archlinux/" class="article-date">
+  <time datetime="2015-08-18T21:17:36.000Z" itemprop="datePublished">2015-08-18</time>
 </a>
     
   <div class="article-category">
@@ -93,11 +93,11 @@ ga('send', 'pageview');
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/23/Introduccion-a-NodeBots/">Introducción a NodeBots</a>
+      <a class="article-title" href="/2015/08/18/Arduino-y-Node-js-en-Archlinux/">Arduino y Node.js en Archlinux</a>
     </h1>
     
-      <a href="https://twitter.com/_carloscarcamo_" rel="external" target="_blank" class="article-author-link">
-        por Carlos Carcamo
+      <a href="https://twitter.com/xiorone" rel="external" target="_blank" class="article-author-link">
+        por Giovanni Hurtado
       </a>
     
   
@@ -106,28 +106,29 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>En esta guía aprenderemos a usar Node.js para comunicarnos con Arduino usando <a href="http://johnny-five.io/">johnny-five</a> un Framework JavaScript para robótica. A continuación una lista de requerimientos para poder seguir este tutorial:</p>
-<ul>
-<li>Node.js y NPM instalados y corriendo en nuestro ordenador, <a href="http://nodebots-sv.github.io/2015/07/08/Instalar-Node-js/">(Ver como instalar Node)</a><br></li>
-<li><a href="https://www.arduino.cc/en/main/software">Arduino IDE</a></li>
-<li>Placa <a href="https://www.arduino.cc/en/Main/ArduinoBoardUno">Arduino UNO</a> (o compatibles)<br></li>
-<li>1 o más Leds<br></li>
-</ul>
-<h2 id="Preparando_el_Arduino">Preparando el Arduino</h2><p>Node.js no puede comunicarse con arduino por si solo pues arduino por defecto se programa en lenguaje C, pero existe otra manera de controlar Arduino desde un software host en el ordenador sin necesidad de programar en el lenguaje nativo de la placa. Esto es posible a través de la librería <a href="https://www.arduino.cc/en/reference/firmata">Firmata</a>. Firmata es un firmware que establece un protocolo de comunicación entre un programa en el ordenador y el Arduino.</p>
+        <p><img src="http://i.imgur.com/MC3DRVF.png" alt="Arduino + Archlinux"></p>
+<p>En este tutorial aprenderemos a trabajar con Arduino y Node.js en Archlinux.</p>
+<p>Para comenzar vamos a seguir los siguientes pasos:</p>
+<ol>
+<li><p>Abrimos una terminal y escribimos.</p>
+ <figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>yaourt -<span class="constant">S </span>arduino</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Ahora agregamos al usuario a los grupos uucp y lock:</p>
+ <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo gpasswd -<span class="tag">a</span> &lt;user&gt; uucp</span><br><span class="line">$ sudo gpasswd -<span class="tag">a</span> &lt;user&gt; lock</span><br></pre></td></tr></table></figure>
         
           <p class="article-more-link">
-            <a href="/2015/07/23/Introduccion-a-NodeBots/#more">Seguir leyendo</a>
+            <a href="/2015/08/18/Arduino-y-Node-js-en-Archlinux/#more">Seguir leyendo</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nodebots-sv.github.io/2015/07/23/Introduccion-a-NodeBots/" data-id="cicgvlkdo0000x3faexhocopi" class="article-share-link">Compartir</a>
+      <a data-url="http://nodebots-sv.github.io/2015/08/18/Arduino-y-Node-js-en-Archlinux/" data-id="cidhxk5zg0000ygfaxwe8ts7x" class="article-share-link">Compartir</a>
       
-        <a href="http://nodebots-sv.github.io/2015/07/23/Introduccion-a-NodeBots/#disqus_thread" class="article-comment-link">Comentarios</a>
+        <a href="http://nodebots-sv.github.io/2015/08/18/Arduino-y-Node-js-en-Archlinux/#disqus_thread" class="article-comment-link">Comentarios</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Arduino/">Arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hardware/">Hardware</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NodeBots/">NodeBots</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/johnny-five-js/">johnny-five.js</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Archlinux/">Archlinux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Arduino/">Arduino</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li></ul>
 
     </footer>
   </div>
@@ -180,7 +181,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nodebots-sv.github.io/2015/07/08/Instalar-Node-js/" data-id="cicgg1itb00077efay646ztmi" class="article-share-link">Compartir</a>
+      <a data-url="http://nodebots-sv.github.io/2015/07/08/Instalar-Node-js/" data-id="cidhxk60z000fygfa2wogwbo4" class="article-share-link">Compartir</a>
       
         <a href="http://nodebots-sv.github.io/2015/07/08/Instalar-Node-js/#disqus_thread" class="article-comment-link">Comentarios</a>
       
@@ -232,7 +233,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://nodebots-sv.github.io/2015/07/07/nodebots-day-2015/" data-id="cicgg1it600027efab0s9ll5r" class="article-share-link">Compartir</a>
+      <a data-url="http://nodebots-sv.github.io/2015/07/07/nodebots-day-2015/" data-id="cidhxk60v000aygfa1px21ivm" class="article-share-link">Compartir</a>
       
         <a href="http://nodebots-sv.github.io/2015/07/07/nodebots-day-2015/#disqus_thread" class="article-comment-link">Comentarios</a>
       
@@ -265,7 +266,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arduino/">Arduino</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GNU-Linux/">GNU/Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hardware/">Hardware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NodeBots/">NodeBots</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/eventos/">eventos</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/johnny-five-js/">johnny-five.js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Archlinux/">Archlinux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arduino/">Arduino</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GNU-Linux/">GNU/Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/eventos/">eventos</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -274,7 +275,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Arduino/" style="font-size: 10px;">Arduino</a> <a href="/tags/GNU-Linux/" style="font-size: 10px;">GNU/Linux</a> <a href="/tags/Hardware/" style="font-size: 10px;">Hardware</a> <a href="/tags/Node-js/" style="font-size: 10px;">Node.js</a> <a href="/tags/NodeBots/" style="font-size: 10px;">NodeBots</a> <a href="/tags/eventos/" style="font-size: 10px;">eventos</a> <a href="/tags/johnny-five-js/" style="font-size: 10px;">johnny-five.js</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a>
+      <a href="/tags/Archlinux/" style="font-size: 10px;">Archlinux</a> <a href="/tags/Arduino/" style="font-size: 10px;">Arduino</a> <a href="/tags/GNU-Linux/" style="font-size: 10px;">GNU/Linux</a> <a href="/tags/eventos/" style="font-size: 10px;">eventos</a> <a href="/tags/node-js/" style="font-size: 20px;">node.js</a>
     </div>
   </div>
 
@@ -283,7 +284,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archivo</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">Julio 2015</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">Agosto 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">Julio 2015</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -295,7 +296,7 @@ ga('send', 'pageview');
       <ul>
         
           <li>
-            <a href="/2015/07/23/Introduccion-a-NodeBots/">Introducción a NodeBots</a>
+            <a href="/2015/08/18/Arduino-y-Node-js-en-Archlinux/">Arduino y Node.js en Archlinux</a>
           </li>
         
           <li>
