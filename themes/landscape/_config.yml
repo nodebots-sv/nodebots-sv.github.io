@@ -3,6 +3,7 @@ menu:
   Inicio: /
   Archivo: /archives
   Nosotros: /nosotros
+  Contribuir: /contribuir
   Github: https://github.com/nodebots-sv/
 rss: /atom.xml
 
